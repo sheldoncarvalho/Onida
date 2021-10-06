@@ -28,6 +28,7 @@ public void selectmethod() {
     driver.findElement(By.xpath("//button[text()='Get All Selected']")).click();
     
     //test1212
+//done
 }
 	
 }
