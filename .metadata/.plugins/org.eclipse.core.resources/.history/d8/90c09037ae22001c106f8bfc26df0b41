@@ -1,0 +1,14 @@
+import org.openqa.selenium.By;
+
+public class fr {
+
+//  JavascriptExecutor js = (JavascriptExecutor) driver;
+//  js.executeScript("window.scrollBy(0,100)");
+  
+  //driver.findElement(By.id("iFrame"));
+  
+  //driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@name='globalSqa']")));
+  //System.out.println("success");
+  driver.findElement(By.xpath("//input[@name='s']")).sendKeys("HELLO");
+  System.out.println("success");
+}

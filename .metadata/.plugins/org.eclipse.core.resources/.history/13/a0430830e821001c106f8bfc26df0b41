@@ -1,0 +1,9 @@
+import org.testng.annotations.Test;
+
+public class del {
+	@Test
+	public static void nakshatra() {
+		
+	}
+	
+}

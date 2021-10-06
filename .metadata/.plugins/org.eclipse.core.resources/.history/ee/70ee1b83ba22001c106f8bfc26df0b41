@@ -1,0 +1,37 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+import junit.framework.Assert;
+
+public class browserstack2 {
+@Test
+	public void browser() throws InterruptedException{
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sheldon\\Automation\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.browserstack.com/automate/capabilities");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[@id='accept-cookie-notification']")).click();
+		Actions act = new Actions(driver);
+		act.moveToElement(driver.findElement(By.xpath("//a[@id='doc-device-trigger']")));
+		
+		driver.findElement(By.xpath("//a[@id='doc-os-trigger']")).click();
+		driver.findElement(By.xpath("//span[text()='Android']")).click();
+		
+		driver.findElement(By.xpath("//a[@id='doc-device-trigger']")).click();
+		driver.findElement(By.xpath("//span[text()='Pixel 4']")).click();
+		
+		String actual =driver.findElement(By.xpath("//span[text()='\"Google Pixel 4\"']")).getText();
+		String Expected = "google pixel 4";
+		
+		Assert.assertEquals(Expected, actual);
+		
+		System.out.println("succes");
+}
+}
