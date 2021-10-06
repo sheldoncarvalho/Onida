@@ -27,7 +27,7 @@ public void selectmethod() {
     driver.findElement(By.xpath("//option[text()='New York']")).click();
     driver.findElement(By.xpath("//button[text()='Get All Selected']")).click();
     
-    //test
+    //test1212
 }
 	
 }
